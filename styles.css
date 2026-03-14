@@ -178,6 +178,22 @@ nav ul li a:hover::after {
    display: block;
 }
 
+/* Skill bars */
+.skill-list { 
+   display:flex;
+   flex-direction:column;
+   gap:16px;
+}
+
+.sk-top { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
+.sk-name { font-size:13px; color:#aaa; }
+.sk-val { font-size:11px; font-family:'Space Mono',monospace; color:#444; }
+.sk-track { height:3px; background:#181818; border-radius:2px; overflow:hidden; }
+.sk-fill { height:100%; border-radius:2px; background:#ff004f; width:0; transition:width 1s cubic-bezier(.4,0,.2,1); }
+.sk-fill.teal   { background:#1db98a; }
+.sk-fill.amber  { background:#f5a623; }
+.sk-fill.purple { background:#7c6fef; }
+
 hr {
    margin-top: 10px;
    width: 100%;
