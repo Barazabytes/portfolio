@@ -320,6 +320,74 @@ hr {
    background: #ff004f;
 }
 
+/* Coming soon cards */
+.coming-soon-card {
+   background: #141414;
+   border: 1px dashed #333;
+   border-radius: 10px;
+   min-height: 240px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: border-color 0.3s, transform 0.3s;
+}
+ 
+.coming-soon-card:hover {
+   border-color: #ff004f;
+   transform: translateY(-6px);
+}
+ 
+.coming-soon-inner {
+   text-align: center;
+   padding: 30px;
+}
+ 
+.cs-icon {
+   font-size: 36px;
+   margin-bottom: 14px;
+}
+ 
+.coming-soon-inner h3 {
+   font-size: 20px;
+   font-weight: 500;
+   color: #fff;
+   margin-bottom: 10px;
+}
+ 
+.coming-soon-inner p {
+   font-size: 13px;
+   color: #888;
+   margin-bottom: 14px;
+   line-height: 1.6;
+}
+ 
+.coming-soon-label {
+   display: inline-block;
+   background: rgba(255,0,79,0.12);
+   border: 1px solid #ff004f;
+   color: #ff004f;
+   padding: 4px 14px;
+   border-radius: 20px;
+   font-size: 12px;
+   font-weight: 500;
+}
+ 
+.btn {
+   display: block;
+   margin: 50px auto;
+   width: fit-content;
+   border: 1px solid #ff004f;
+   padding: 14px 40px;
+   border-radius: 6px;
+   text-decoration: none;
+   color: #fff;
+   transition: background 0.5s;
+}
+ 
+.btn:hover {
+   background: #ff004f;
+}
+
 
 /* ------------------------------------contact--------------------------------- */
 .contact-left {
