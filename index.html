@@ -9,8 +9,6 @@
    <title>Said Baraza | Edge AI/ML Engineer</title>
 </head>
 <body>
- 
-<!-- ============ Nav ============ -->
    <div id="header">
       <div class="container">
          <nav>
@@ -25,290 +23,207 @@
             </ul>
             <img src="icons/menu.png" class="open" onclick="openmenu()" alt="Menu">
          </nav>
- 
-         <!-- ── Hero ── -->
+
          <div class="header-text">
-            <div class="hero-role-badge">
-               <span class="hero-role-dot"></span>
-               Computer Engineering Student &middot; University of Dodoma
-            </div>
-            <h1>Said <span>Baraza</span><br>Edge AI / ML<br>Engineer</h1>
-            <p class="hero-desc">
-               Building intelligent systems that run directly on microcontrollers &mdash;
-               real-time inference at the edge, zero cloud dependency.
-            </p>
+            <p class="tagline">Designing intelligence for constrained hardware.</p>
+            <h1>Hi, I'm Said <span>Baraza</span><br>From Tanzania</h1>
             <div class="hero-stack">
                <span class="stack-badge">ESP32</span>
                <span class="stack-badge">TensorFlow Lite</span>
                <span class="stack-badge">ESP-IDF</span>
                <span class="stack-badge">FreeRTOS</span>
-               <span class="stack-badge">MQTT</span>
-               <span class="stack-badge">Edge Impulse</span>
-               <span class="stack-badge">C / C++</span>
-               <span class="stack-badge">Python</span>
-            </div>
-         </div>
- 
-         <!-- Hero stats column -->
-         <div class="hero-stats">
-            <div class="hstat">
-               <div class="hstat-num">2<span>+</span></div>
-               <div class="hstat-lbl">Projects built</div>
-            </div>
-            <div class="hstat">
-               <div class="hstat-num">3<span>rd</span></div>
-               <div class="hstat-lbl">Year student</div>
-            </div>
-            <div class="hstat">
-               <div class="hstat-num">1k<span>+</span></div>
-               <div class="hstat-lbl">YouTube subs</div>
+               <span class="stack-badge">IoT</span>
+               <span class="stack-badge">Edge AI</span>
             </div>
          </div>
       </div>
    </div>
- 
+
 <!-- ============ About ============ -->
    <div id="about">
       <div class="container">
-         <div class="sec-head">
-            <p class="sec-kicker">About</p>
-            <h1 class="sub-title">Who I <span style="color:#ff004f;">Am</span></h1>
-            <div class="sec-line"></div>
-         </div>
-         <div class="about-layout">
- 
-            <!-- Left: bio + badge grid -->
+         <div class="row">
             <div class="about-col-1">
                <img src="images/me.jpg" alt="Said Baraza">
-               <p class="bio-text">
-                  I'm a <strong>Computer Engineering student</strong> at the University of Dodoma with a focused
-                  interest in Edge AI/ML &mdash; the intersection of machine learning and embedded hardware.
-                  <br><br>
-                  I specialize in deploying quantized <strong>TensorFlow Lite</strong> models on
-                  resource-constrained devices like the ESP32, and building complete IoT systems from
-                  firmware to user-facing web interfaces.
-                  <br><br>
-                  My goal: make on-device AI practical for real-world applications &mdash; smart homes,
-                  autonomous sensors, and embedded automation. I share progress on my
-                  <a href="https://youtube.com/@barazabytes" target="_blank">YouTube channel &nearr;</a>.
-               </p>
-               <div class="bio-divider"></div>
-               <div class="tech-badge-grid">
-                  <span class="tech-badge">ESP-IDF</span>
-                  <span class="tech-badge">TensorFlow Lite</span>
-                  <span class="tech-badge">FreeRTOS</span>
-                  <span class="tech-badge">C / C++</span>
-                  <span class="tech-badge">Python</span>
-                  <span class="tech-badge">MQTT</span>
-                  <span class="tech-badge">WebSockets</span>
-                  <span class="tech-badge">Edge Impulse</span>
-                  <span class="tech-badge">HTML5 / CSS3</span>
-                  <span class="tech-badge">Git</span>
-               </div>
             </div>
- 
-            <!-- Right: tabbed skills / exp / edu -->
             <div class="about-col-2">
-               <div class="tab-strip">
+               <h1 class="sub-title">About <span style="color:#ff004f;">Me</span></h1>
+               <p>
+                  Hello 👋 I'm Said Baraza — a Computer Engineering student at the University of Dodoma
+                  with a deep focus on <strong>Edge AI/ML Engineering</strong>. I build intelligent systems
+                  that run directly on microcontrollers, eliminating cloud dependency and enabling real-time
+                  inference at the edge.
+                  <br><br>
+                  I specialize in firmware development with <strong>ESP-IDF</strong>, deploying quantized
+                  TensorFlow Lite models on ESP32, and designing end-to-end IoT solutions from hardware
+                  to user-facing web interfaces. My goal is to make AI accessible in resource-constrained
+                  environments — smart homes, embedded sensors, and autonomous devices.
+                  <br><br>
+                  Beyond building, I share my knowledge through my
+                  <a href="https://youtube.com/@barazabytes" target="_blank" style="color:#ff004f;">YouTube channel</a>
+                  and am working toward contributing to AI-powered embedded systems that improve daily life.
+               </p>
+               <hr>
+
+               <div class="tab-titles">
                   <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                   <p class="tab-links" onclick="opentab('experience')">Experience</p>
                   <p class="tab-links" onclick="opentab('education')">Education</p>
                </div>
- 
+
+               <!-- Skills Tab -->
                <div class="tab-contents active-tab" id="skills">
-                  <div class="skill-list">
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">Embedded Systems (ESP-IDF / FreeRTOS)</span><span class="sk-val">85%</span></div>
-                        <div class="sk-track"><div class="sk-fill" data-w="85"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">Edge AI / TensorFlow Lite</span><span class="sk-val">75%</span></div>
-                        <div class="sk-track"><div class="sk-fill teal" data-w="75"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">IoT Protocols (MQTT / WebSockets)</span><span class="sk-val">80%</span></div>
-                        <div class="sk-track"><div class="sk-fill amber" data-w="80"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">C / C++ Firmware</span><span class="sk-val">78%</span></div>
-                        <div class="sk-track"><div class="sk-fill" data-w="78"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">Python (ML scripting)</span><span class="sk-val">70%</span></div>
-                        <div class="sk-track"><div class="sk-fill purple" data-w="70"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">Web Interfaces (HTML / CSS / JS)</span><span class="sk-val">72%</span></div>
-                        <div class="sk-track"><div class="sk-fill amber" data-w="72"></div></div>
-                     </div>
+                  <ul>
+                     <li>
+                        <span>Embedded System Development</span><br>
+                        Firmware development using <span>ESP-IDF</span> and FreeRTOS on ESP32.
+                        Designing robust home automation and IoT systems from ground up.
+                     </li>
+                     <li>
+                        <span>Edge AI / Machine Learning</span><br>
+                        Deploying INT8 quantized <span>TensorFlow Lite</span> models on MCUs.
+                        On-device inference for real-time decision making without cloud dependency.
+                     </li>
+                     <li>
+                        <span>IoT Protocols & Connectivity</span><br>
+                        MQTT, WebSockets, HTTP REST APIs. Wireless communication via Wi-Fi & BLE on ESP32.
+                     </li>
+                     <li>
+                        <span>Web Interfaces for Embedded Devices</span><br>
+                        Lightweight self-hosted web UIs running directly on microcontrollers using <span>HTML5 / CSS3</span>.
+                     </li>
+                  </ul>
+
+                  <div class="tech-badge-grid">
+                     <span class="tech-badge">ESP-IDF</span>
+                     <span class="tech-badge">TensorFlow Lite</span>
+                     <span class="tech-badge">FreeRTOS</span>
+                     <span class="tech-badge">C / C++</span>
+                     <span class="tech-badge">Python</span>
+                     <span class="tech-badge">MQTT</span>
+                     <span class="tech-badge">WebSockets</span>
+                     <span class="tech-badge">Edge Impulse</span>
+                     <span class="tech-badge">HTML5 / CSS3</span>
+                     <span class="tech-badge">Git</span>
                   </div>
                </div>
- 
+
+               <!-- Experience Tab -->
                <div class="tab-contents" id="experience">
-                  <div class="xp-list">
-                     <div class="xp-item">
-                        <div class="xp-dot"></div>
-                        <div class="xp-body">
-                           <div class="xp-date">2025</div>
-                           <div class="xp-title">BulbBuddy &mdash; Smart Home Project</div>
-                           <div class="xp-desc">Self-hosted bulb control on ESP32. Device serves its own web app over Wi-Fi &mdash; no cloud, no app required. Stack: ESP-IDF &middot; WebSockets &middot; FreeRTOS</div>
-                        </div>
-                     </div>
-                     <div class="xp-item">
-                        <div class="xp-dot teal-dot"></div>
-                        <div class="xp-body">
-                           <div class="xp-date">Ongoing</div>
-                           <div class="xp-title">Edge Impulse Experiments</div>
-                           <div class="xp-desc">Keyword spotting and gesture recognition models optimised for ESP32's 520 KB SRAM using TensorFlow Lite for Microcontrollers.</div>
-                        </div>
-                     </div>
-                  </div>
+                  <ul>
+                     <li>
+                        <span>2025 — BulbBuddy</span><br>
+                        Built a self-hosted smart bulb control system on ESP32. The device serves its own
+                        web app over Wi-Fi — no cloud, no app store. Users toggle lights via a browser.
+                        Stack: <span>ESP-IDF · WebSockets · HTML/CSS · FreeRTOS</span>
+                     </li>
+                     <li>
+                        <span>Ongoing — Edge Impulse Experiments</span><br>
+                        Exploring keyword spotting and gesture recognition models optimized for ESP32's
+                        240 MHz dual-core CPU and 520 KB SRAM constraints using <span>TensorFlow Lite for Microcontrollers</span>.
+                     </li>
+                  </ul>
                </div>
- 
+
+               <!-- Education Tab -->
                <div class="tab-contents" id="education">
-                  <div class="xp-list">
-                     <div class="xp-item">
-                        <div class="xp-dot"></div>
-                        <div class="xp-body">
-                           <div class="xp-date">2023 &ndash; 2027</div>
-                           <div class="xp-title">B.Sc. Computer Engineering</div>
-                           <div class="xp-desc">University of Dodoma</div>
-                        </div>
-                     </div>
-                     <div class="xp-item">
-                        <div class="xp-dot dim-dot"></div>
-                        <div class="xp-body">
-                           <div class="xp-date">2021 &ndash; 2023</div>
-                           <div class="xp-title">A-Level Certificate</div>
-                           <div class="xp-desc">Azania Boys' High School</div>
-                        </div>
-                     </div>
-                     <div class="xp-item">
-                        <div class="xp-dot dim-dot"></div>
-                        <div class="xp-body">
-                           <div class="xp-date">2017 &ndash; 2020</div>
-                           <div class="xp-title">O-Level Certificate</div>
-                           <div class="xp-desc">Deo-Sanga Secondary School</div>
-                        </div>
-                     </div>
-                     <div class="xp-item">
-                        <div class="xp-dot dim-dot"></div>
-                        <div class="xp-body">
-                           <div class="xp-date">2009 &ndash; 2016</div>
-                           <div class="xp-title">Primary Certificate</div>
-                           <div class="xp-desc">Kahawa Primary School</div>
-                        </div>
-                     </div>
-                  </div>
+                  <ul>
+                     <li><span>2023 – 2027</span><br>B.Sc. <span>Computer Engineering</span> — University of <span>Dodoma</span></li>
+                     <li><span>2021 – 2023</span><br>A-Level Certificate — <span>Azania Boys'</span> High School</li>
+                     <li><span>2017 – 2020</span><br>O-Level Certificate — <span>Deo-Sanga</span> Secondary School</li>
+                     <li><span>2009 – 2016</span><br>Primary Certificate — <span>Kahawa</span> Primary School</li>
+                  </ul>
                </div>
             </div>
          </div>
       </div>
    </div>
- 
+
 <!-- ============ Services ============ -->
    <div id="services">
       <div class="container">
-         <div class="sec-head">
-            <p class="sec-kicker">What I do</p>
-            <h1 class="sub-title">My <span style="color:#ff004f;">Services</span></h1>
-            <div class="sec-line"></div>
-         </div>
+         <h1 class="sub-title">My Services</h1>
          <div class="services-list">
+
             <div>
                <img src="icons/chipupe.png" alt="Embedded Systems">
                <h2>Embedded System Development</h2>
-               <p>End-to-end firmware for ESP32 using <strong>ESP-IDF</strong> and FreeRTOS.
-               Smart home automation, sensor networks, and IoT devices from hardware to wireless connectivity.</p>
+               <p>End-to-end firmware development for ESP32 using <strong>ESP-IDF</strong> and FreeRTOS.
+               From hardware design to wireless connectivity — smart home automation, sensor networks, and IoT devices.</p>
                <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
             </div>
+
             <div>
                <img src="icons/upe.png" alt="Edge AI">
                <h2>Edge AI Model Deployment</h2>
-               <p>Deploying INT8 quantized <strong>TensorFlow Lite</strong> models onto microcontrollers.
-               On-device inference for image classification, keyword spotting, anomaly detection &mdash; no cloud required.</p>
+               <p>Deploying INT8 quantized <strong>TensorFlow Lite</strong> models directly onto microcontrollers.
+               On-device inference for image classification, keyword spotting, and anomaly detection — no cloud required.</p>
                <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
             </div>
+
             <div>
                <img src="icons/appupe.png" alt="IoT Web UI">
                <h2>IoT Web Interface Design</h2>
-               <p>Lightweight self-hosted dashboards running directly on ESP32.
-               Control and monitor your device from any browser on the local network &mdash; no app install needed.</p>
+               <p>Building lightweight, self-hosted web dashboards that run directly on ESP32.
+               Control and monitor your embedded device from any browser on the local network — no app install needed.</p>
                <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
             </div>
+
          </div>
       </div>
    </div>
- 
+
 <!-- ============ Portfolio ============ -->
    <div id="portfolio">
       <div class="container">
-         <div class="sec-head">
-            <p class="sec-kicker">Portfolio</p>
-            <h1 class="sub-title">My <span style="color:#ff004f;">Work</span></h1>
-            <div class="sec-line"></div>
-         </div>
+         <h1 class="sub-title">My Work</h1>
          <div class="work-list">
- 
-            <!-- BulbBuddy -->
-            <div class="p-card">
-               <div class="p-thumb">
-                  <img src="images/work-2.png" alt="BulbBuddy">
-                  <div class="p-accent" style="background:linear-gradient(90deg,#ff004f,#ff6b35);"></div>
-               </div>
-               <div class="p-body">
-                  <h3 class="p-title">BulbBuddy</h3>
-                  <p class="p-desc">Self-hosted smart bulb control. ESP32 serves its own web app over Wi-Fi &mdash; control lights from any browser, zero cloud dependency.</p>
-                  <div class="p-tags">
-                     <span class="p-tag red">ESP32</span>
-                     <span class="p-tag red">ESP-IDF</span>
-                     <span class="p-tag">WebSockets</span>
-                     <span class="p-tag">FreeRTOS</span>
+
+            <!-- Project 1: BulbBuddy -->
+            <div class="work">
+               <img src="images/work-2.png" alt="BulbBuddy Project">
+               <div class="layer">
+                  <h3>BulbBuddy</h3>
+                  <div class="project-tags">
+                     <span>ESP32</span><span>ESP-IDF</span><span>WebSockets</span><span>FreeRTOS</span>
                   </div>
-                  <div class="p-actions">
-                     <a href="https://youtube.com/@barazabytes" target="_blank" class="p-btn primary">View Project &nearr;</a>
-                     <a href="docs/bulbbuddy-documentation.pdf" download class="p-btn">&#128196; Docs</a>
-                  </div>
+                  <p>Self-hosted smart bulb control system. The ESP32 serves its own web app over Wi-Fi —
+                  control house lights from any browser with zero cloud dependency.</p>
+                  <a href="https://youtube.com/@barazabytes" target="_blank"><img src="icons/link.png" alt="Link"></a>
                </div>
             </div>
- 
-            <!-- Coming soon 1 -->
-            <div class="coming-soon-card">
+
+            <!-- Project 2: Coming Soon -->
+            <div class="work coming-soon-card">
                <div class="coming-soon-inner">
-                  <div class="cs-icon">&#9881;&#65039;</div>
+                  <div class="cs-icon">⚙️</div>
                   <h3>Edge AI Classifier</h3>
                   <div class="project-tags">
                      <span>TFLite</span><span>ESP32</span><span>Edge Impulse</span>
                   </div>
-                  <p>Quantized TFLite model on ESP32 for real-time on-device inference &mdash; no cloud round-trip.</p>
-                  <div class="cs-footer">
-                     <span class="coming-soon-label">Coming Soon</span>
-                     <a href="docs/edge-ai-classifier-docs.pdf" download class="cs-doc-btn">&#128196; Early Docs</a>
-                  </div>
+                  <p>On-device ML inference for real-time classification. Deploying a quantized TensorFlow Lite model on ESP32 with no cloud round-trip.</p>
+                  <span class="coming-soon-label">Coming Soon</span>
                </div>
             </div>
- 
-            <!-- Coming soon 2 -->
-            <div class="coming-soon-card">
+
+            <!-- Project 3: Coming Soon -->
+            <div class="work coming-soon-card">
                <div class="coming-soon-inner">
-                  <div class="cs-icon">&#128225;</div>
+                  <div class="cs-icon">📡</div>
                   <h3>MQTT Sensor Network</h3>
                   <div class="project-tags">
                      <span>MQTT</span><span>ESP32</span><span>FreeRTOS</span>
                   </div>
-                  <p>Multi-node IoT sensor network with central MQTT broker. Real-time environmental monitoring across distributed ESP32 nodes.</p>
-                  <div class="cs-footer">
-                     <span class="coming-soon-label">Coming Soon</span>
-                     <a href="docs/mqtt-network-docs.pdf" download class="cs-doc-btn">&#128196; Early Docs</a>
-                  </div>
+                  <p>Multi-node IoT sensor network with a central MQTT broker. Real-time environmental monitoring across distributed ESP32 nodes.</p>
+                  <span class="coming-soon-label">Coming Soon</span>
                </div>
             </div>
- 
+
          </div>
          <a href="https://youtube.com/@barazabytes" class="btn" target="_blank">See More on YouTube</a>
       </div>
    </div>
- 
+
 <!-- ============ Contact ============ -->
    <div id="contact">
       <div class="container">
@@ -325,17 +240,13 @@
                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-               <form id="contact-form" novalidate>
-                  <input type="text"  name="Name"    placeholder="Your Name"  required>
-                  <input type="email" name="Email"   placeholder="Your Email" required>
-                  <textarea           name="Message" rows="6" placeholder="Your message" required></textarea>
-                  <button type="submit" class="btn btn2">Send Message</button>
+               <form name="submit-to-google-sheet">
+                  <input type="text" name="Name" placeholder="Your Name" required>
+                  <input type="email" name="Email" placeholder="Your Email" required>
+                  <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                  <button type="submit" class="btn btn2">Submit</button>
                   <span id="msg"></span>
                </form>
-               <p class="form-fallback">
-                  Prefer filling directly?
-                  <a href="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform" target="_blank">Open Google Form &nearr;</a>
-               </p>
             </div>
          </div>
       </div>
@@ -343,77 +254,41 @@
          <p>Copyright &copy; <span style="color:#ff004f;">2025</span> Said Baraza &mdash; Edge AI/ML Engineer</p>
       </div>
    </div>
- 
+
    <!-- ===== Scripts ===== -->
    <script>
-      var tablinks    = document.getElementsByClassName("tab-links");
+      var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
- 
+
       function opentab(tabname) {
-         for (var tl of tablinks)    tl.classList.remove("active-link");
-         for (var tc of tabcontents) tc.classList.remove("active-tab");
+         for (var tablink of tablinks) tablink.classList.remove("active-link");
+         for (var tabcontent of tabcontents) tabcontent.classList.remove("active-tab");
          event.currentTarget.classList.add("active-link");
          document.getElementById(tabname).classList.add("active-tab");
-         if (tabname === 'skills') animateBars();
       }
- 
-      function animateBars() {
-         document.querySelectorAll('.sk-fill').forEach(function(el) {
-            el.style.width = '0';
-            setTimeout(function() { el.style.width = el.dataset.w + '%'; }, 80);
-         });
-      }
-      window.addEventListener('load', function() { setTimeout(animateBars, 400); });
    </script>
- 
+
    <script>
       var sidemenu = document.getElementById("sidemenu");
-      function openmenu()  { sidemenu.style.right = "0"; }
+      function openmenu() { sidemenu.style.right = "0"; }
       function closemenu() { sidemenu.style.right = "-200px"; }
    </script>
- 
+
    <script>
-      var APPS_SCRIPT_URL    = 'https://script.google.com/macros/s/AKfycbz3pCFHXsYSfPcxM1VpCKNcaiCvP6e5wdtNU4TA4CPVl6TM5SzgVHyIA-YjvBDCakp8/exec';
-      var GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse';
-      var GF_FIELD_NAME      = 'entry.NAME_FIELD_ID';
-      var GF_FIELD_EMAIL     = 'entry.EMAIL_FIELD_ID';
-      var GF_FIELD_MESSAGE   = 'entry.MESSAGE_FIELD_ID';
- 
-      var contactForm = document.getElementById('contact-form');
-      var msgEl       = document.getElementById('msg');
- 
-      contactForm.addEventListener('submit', function(e) {
-         e.preventDefault();
-         var name    = contactForm.Name.value.trim();
-         var email   = contactForm.Email.value.trim();
-         var message = contactForm.Message.value.trim();
-         if (!name || !email || !message) {
-            msgEl.style.color = '#ff004f'; msgEl.innerHTML = 'Please fill in all fields.'; return;
-         }
-         msgEl.style.color = '#ababab'; msgEl.innerHTML = 'Sending...';
-         var fd = new FormData();
-         fd.append('Name', name); fd.append('Email', email); fd.append('Message', message);
-         fetch(APPS_SCRIPT_URL, { method: 'POST', body: fd }).catch(function() {});
-         var iframe = document.createElement('iframe');
-         iframe.name = 'gf-hidden'; iframe.style.display = 'none';
-         document.body.appendChild(iframe);
-         var gfForm = document.createElement('form');
-         gfForm.action = GOOGLE_FORM_ACTION; gfForm.method = 'POST'; gfForm.target = 'gf-hidden';
-         var fields = {}; fields[GF_FIELD_NAME] = name; fields[GF_FIELD_EMAIL] = email; fields[GF_FIELD_MESSAGE] = message;
-         Object.keys(fields).forEach(function(key) {
-            var inp = document.createElement('input');
-            inp.type = 'hidden'; inp.name = key; inp.value = fields[key]; gfForm.appendChild(inp);
-         });
-         document.body.appendChild(gfForm); gfForm.submit();
-         setTimeout(function() {
-            if (iframe.parentNode) document.body.removeChild(iframe);
-            if (gfForm.parentNode) document.body.removeChild(gfForm);
-         }, 4000);
-         msgEl.style.color = '#61b752';
-         msgEl.innerHTML = "Message sent! I'll get back to you soon.";
-         setTimeout(function() { msgEl.innerHTML = ''; }, 5000);
-         contactForm.reset();
-      });
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz3pCFHXsYSfPcxM1VpCKNcaiCvP6e5wdtNU4TA4CPVl6TM5SzgVHyIA-YjvBDCakp8/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg");
+
+      form.addEventListener('submit', e => {
+         e.preventDefault()
+         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+               msg.innerHTML = "Message sent successfully 😊"
+               setTimeout(() => { msg.innerHTML = ""; }, 3000)
+               form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+      })
    </script>
 </body>
 </html>
