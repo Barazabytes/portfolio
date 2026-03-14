@@ -82,8 +82,21 @@ nav ul li a:hover::after {
    color:#ff004f;
 }
 
-
-
+.hero-stack {
+   display:flex; 
+   flex-wrap:wrap; 
+   gap:7px; 
+}
+.stack-badge {
+   font-family:'Space Mono',monospace; font-size:10px;
+   color:#555; border:1px solid #222;
+   padding:4px 12px; border-radius:4px;
+   transition:border-color .25s, color .25s; cursor:default;
+}
+.stack-badge:hover {
+   border-color:#ff004f;
+   color:#ff004f;
+}
 
 
 
