@@ -241,55 +241,79 @@
          <p>Copyright &copy; <span style="color: #ff004f;">2025</span> Baraza</p>
       </div>
    </div>
+
+   <!-- ===== Scripts ===== -->
    <script>
-   // Used to animate the About Me Page
-      var tablinks = document.getElementsByClassName("tab-links");
+      var tablinks    = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
-
-      function opentab(tabname) {   // Removes the UnderLine and it's respective Contents
-         for(tablink of tablinks) {
-            tablink.classList.remove("active-link"); // Removes the Underline
-         }
-         for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab"); // Removes the Contents
-         }
-
-         event.currentTarget.classList.add("active-link");  // This Statement makes the active link have the Underline (Daaaaamn!)
+ 
+      function opentab(tabname) {
+         for (var tl of tablinks)    tl.classList.remove("active-link");
+         for (var tc of tabcontents) tc.classList.remove("active-tab");
+         event.currentTarget.classList.add("active-link");
          document.getElementById(tabname).classList.add("active-tab");
-      
+         if (tabname === 'skills') animateBars();
       }
+ 
+      function animateBars() {
+         document.querySelectorAll('.sk-fill').forEach(function(el) {
+            el.style.width = '0';
+            setTimeout(function() { el.style.width = el.dataset.w + '%'; }, 80);
+         });
+      }
+      window.addEventListener('load', function() { setTimeout(animateBars, 400); });
    </script>
-
+ 
    <script>
-      // Used to animate the side bar
       var sidemenu = document.getElementById("sidemenu");
-
-      function openmenu() {
-         sidemenu.style.right = "0";
-      }
-
-      function closemenu() {
-         sidemenu.style.right = "-200px";
-      }
+      function openmenu()  { sidemenu.style.right = "0"; }
+      function closemenu() { sidemenu.style.right = "-200px"; }
    </script>
+ 
    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbz3pCFHXsYSfPcxM1VpCKNcaiCvP6e5wdtNU4TA4CPVl6TM5SzgVHyIA-YjvBDCakp8/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById("msg");
-
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            msg.innerHTML = "Message sent Successifully😊"
-            setTimeout(function() {
-               msg.innerHTML = "";
-            }, 3000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
+      var APPS_SCRIPT_URL    = 'https://script.google.com/macros/s/AKfycbz3pCFHXsYSfPcxM1VpCKNcaiCvP6e5wdtNU4TA4CPVl6TM5SzgVHyIA-YjvBDCakp8/exec';
+      var GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse';
+      var GF_FIELD_NAME      = 'entry.NAME_FIELD_ID';
+      var GF_FIELD_EMAIL     = 'entry.EMAIL_FIELD_ID';
+      var GF_FIELD_MESSAGE   = 'entry.MESSAGE_FIELD_ID';
+ 
+      var contactForm = document.getElementById('contact-form');
+      var msgEl       = document.getElementById('msg');
+ 
+      contactForm.addEventListener('submit', function(e) {
+         e.preventDefault();
+         var name    = contactForm.Name.value.trim();
+         var email   = contactForm.Email.value.trim();
+         var message = contactForm.Message.value.trim();
+         if (!name || !email || !message) {
+            msgEl.style.color = '#ff004f'; msgEl.innerHTML = 'Please fill in all fields.'; return;
+         }
+         msgEl.style.color = '#ababab'; msgEl.innerHTML = 'Sending...';
+         var fd = new FormData();
+         fd.append('Name', name); fd.append('Email', email); fd.append('Message', message);
+         fetch(APPS_SCRIPT_URL, { method: 'POST', body: fd }).catch(function() {});
+         var iframe = document.createElement('iframe');
+         iframe.name = 'gf-hidden'; iframe.style.display = 'none';
+         document.body.appendChild(iframe);
+         var gfForm = document.createElement('form');
+         gfForm.action = GOOGLE_FORM_ACTION; gfForm.method = 'POST'; gfForm.target = 'gf-hidden';
+         var fields = {}; fields[GF_FIELD_NAME] = name; fields[GF_FIELD_EMAIL] = email; fields[GF_FIELD_MESSAGE] = message;
+         Object.keys(fields).forEach(function(key) {
+            var inp = document.createElement('input');
+            inp.type = 'hidden'; inp.name = key; inp.value = fields[key]; gfForm.appendChild(inp);
+         });
+         document.body.appendChild(gfForm); gfForm.submit();
+         setTimeout(function() {
+            if (iframe.parentNode) document.body.removeChild(iframe);
+            if (gfForm.parentNode) document.body.removeChild(gfForm);
+         }, 4000);
+         msgEl.style.color = '#61b752';
+         msgEl.innerHTML = "Message sent! I'll get back to you soon.";
+         setTimeout(function() { msgEl.innerHTML = ''; }, 5000);
+         contactForm.reset();
+      });
+   </script>
+   
 </body>
 </html>
 
