@@ -1,7 +1,7 @@
 * {
    margin: 0;
    padding: 0;
-   font-family: 'poppins', sans-serif;
+   font-family: 'Poppins', sans-serif;
    box-sizing: border-box;
 }
 html {
@@ -12,6 +12,7 @@ body {
    color: #fff;
 }
 
+/* ============ Header ============ */
 #header {
    width: 100%;
    height: 100vh;
@@ -68,27 +69,50 @@ nav ul li a:hover::after {
    font-size: 30px;
 }
 
+.header-text .tagline {
+   font-size: 18px;
+   color: #ababab;
+   font-style: italic;
+   letter-spacing: 0.5px;
+}
+
 .header-text h1 {
    font-size: 60px;
    margin-top: 20px;
 }
 
-.header-text h1 u {
-   width: 50%;
-   margin-top: 20px;
-}
-
 .header-text span {
-   color:#ff004f;
+   color: #ff004f;
+}
+
+/* Hero tech stack badges */
+.hero-stack {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   margin-top: 24px;
+}
+
+.stack-badge {
+   background: rgba(255, 0, 79, 0.12);
+   border: 1px solid #ff004f;
+   color: #ff004f;
+   padding: 6px 16px;
+   border-radius: 20px;
+   font-size: 13px;
+   font-weight: 500;
+   font-family: 'Space Mono', monospace;
+   letter-spacing: 0.3px;
+   transition: background 0.3s, color 0.3s;
+}
+
+.stack-badge:hover {
+   background: #ff004f;
+   color: #fff;
 }
 
 
-
-
-
-
-
-/* ----------------About------------ */
+/* ============ About ============ */
 #about {
    padding: 30px 0;
    color: #ababab;
@@ -102,7 +126,6 @@ nav ul li a:hover::after {
 
 .about-col-1 {
    flex-basis: 35%;
-
 }
 
 .about-col-1 img {
@@ -133,7 +156,7 @@ nav ul li a:hover::after {
    position: relative;
 }
 
-.tab-links::after { 
+.tab-links::after {
    content: '';
    width: 0;
    height: 3px;
@@ -161,6 +184,7 @@ nav ul li a:hover::after {
 .tab-contents {
    display: none;
 }
+
 .tab-contents.active-tab {
    display: block;
 }
@@ -168,11 +192,35 @@ nav ul li a:hover::after {
 hr {
    margin-top: 10px;
    width: 100%;
-   color: #262626;
+   border-color: #262626;
+}
+
+/* Tech badge grid inside Skills tab */
+.tech-badge-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   margin-top: 24px;
+}
+
+.tech-badge {
+   background: #1a1a1a;
+   border: 1px solid #333;
+   color: #ccc;
+   padding: 5px 13px;
+   border-radius: 20px;
+   font-size: 12px;
+   font-family: 'Space Mono', monospace;
+   transition: border-color 0.3s, color 0.3s;
+}
+
+.tech-badge:hover {
+   border-color: #ff004f;
+   color: #ff004f;
 }
 
 
-/* --------------------------------Services---------------------- */
+/* ============ Services ============ */
 #services {
    padding: 30px 0;
 }
@@ -188,29 +236,28 @@ hr {
    background: #262626;
    padding: 40px;
    font-size: 13px;
-   font-size: 13px;
    font-weight: 300;
    border-radius: 10px;
-   transition: background 0.5s, transform 0.5s;  /* enables the transform: translateY(-10px);*/
+   transition: background 0.5s, transform 0.5s;
 }
 
 .services-list div img {
-   font-size: 50px;
    margin-bottom: 12px;
+   width: 50px;
 }
 
 .services-list div h2 {
-   font-size: 30px;
+   font-size: 26px;
    font-weight: 500;
    margin-bottom: 15px;
 }
 
-.services-list div a{
+.services-list div a {
    text-decoration: none;
    color: #ff004f;
    font-size: 12px;
    margin-top: 20px;
-   display: inline-block;   
+   display: inline-block;
 }
 
 .services-list div a:hover {
@@ -219,23 +266,22 @@ hr {
 
 .services-list div:hover {
    background-color: #ff004f;
-   transform: translateY(-10px);  /* moves card 10px up*/
+   transform: translateY(-10px);
 }
 
-.services-list div:hover a{
+.services-list div:hover a {
    color: #fff;
 }
 
 
-
-/* ----------------------------Portfolio---------------------- */
+/* ============ Portfolio ============ */
 #portfolio {
    padding: 50px 0;
 }
 
 .work-list {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
    grid-gap: 40px;
    margin-top: 50px;
 }
@@ -253,7 +299,7 @@ hr {
    transition: transform 0.5s;
 }
 
-.work:hover img{
+.work:hover img {
    transform: scale(1.1);
 }
 
@@ -282,11 +328,30 @@ hr {
 
 .layer h3 {
    font-weight: 500;
-   margin-bottom: 20px;
+   margin-bottom: 8px;
+}
+
+/* Project tech tags inside layer */
+.project-tags {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5px;
+   justify-content: center;
+   margin-bottom: 10px;
+}
+
+.project-tags span {
+   background: rgba(255,255,255,0.18);
+   border: 1px solid rgba(255,255,255,0.4);
+   color: #fff;
+   padding: 2px 9px;
+   border-radius: 12px;
+   font-size: 11px;
+   font-family: 'Space Mono', monospace;
 }
 
 .layer a {
-   margin-top: 20px;
+   margin-top: 16px;
    color: #ff004f;
    text-decoration: none;
    font-size: 18px;
@@ -296,12 +361,65 @@ hr {
    height: 60px;
    border-radius: 50%;
    text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .layer a img {
    width: 20px;
-   margin-left: 20px;
-   margin-top: 20px;
+}
+
+/* Coming soon cards */
+.coming-soon-card {
+   background: #141414;
+   border: 1px dashed #333;
+   border-radius: 10px;
+   min-height: 240px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: border-color 0.3s, transform 0.3s;
+}
+
+.coming-soon-card:hover {
+   border-color: #ff004f;
+   transform: translateY(-6px);
+}
+
+.coming-soon-inner {
+   text-align: center;
+   padding: 30px;
+}
+
+.cs-icon {
+   font-size: 36px;
+   margin-bottom: 14px;
+}
+
+.coming-soon-inner h3 {
+   font-size: 20px;
+   font-weight: 500;
+   color: #fff;
+   margin-bottom: 10px;
+}
+
+.coming-soon-inner p {
+   font-size: 13px;
+   color: #888;
+   margin-bottom: 14px;
+   line-height: 1.6;
+}
+
+.coming-soon-label {
+   display: inline-block;
+   background: rgba(255,0,79,0.12);
+   border: 1px solid #ff004f;
+   color: #ff004f;
+   padding: 4px 14px;
+   border-radius: 20px;
+   font-size: 12px;
+   font-weight: 500;
 }
 
 .btn {
@@ -321,10 +439,10 @@ hr {
 }
 
 
-/* ------------------------------------contact--------------------------------- */
+/* ============ Contact ============ */
 .contact-left {
    flex-basis: 35%;
-} 
+}
 
 .contact-right {
    flex-basis: 60%;
@@ -340,21 +458,22 @@ hr {
    margin-right: 10px;
    width: 20px;
 }
+
 .social-icons {
    margin-top: 30px;
 }
-.social-icons a img{
+
+.social-icons a img {
    text-decoration: none;
    width: 35px;
    margin-right: 15px;
    display: inline-block;
-   transition: transform .5s;
    border-radius: 50px;
    padding: 5px;
-   transition: .3s;
+   transition: background 0.3s, transform 0.3s;
 }
 
-.social-icons a img:hover{
+.social-icons a img:hover {
    background-color: #ff004f;
    transform: translateY(-5px);
 }
@@ -368,7 +487,8 @@ hr {
    width: 100%;
 }
 
-form input, form textarea {
+form input,
+form textarea {
    width: 100%;
    outline: none;
    border: 0;
@@ -394,19 +514,23 @@ form .btn2 {
    background: #262626;
    font-weight: 300;
    margin-top: 20px;
+   font-size: 14px;
+}
+
+#msg {
+   color: #61b752;
+   margin-top: -40px;
+   display: block;
 }
 
 
-
-/* --------------------- Media Queries -------------------- */
-/* ---- Small Screen ---- */
+/* ============ Media Queries ============ */
 nav ul img, img.open {
    display: none;
 }
 
-@media only screen and  (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
-   /* Editing the Header */
    #header {
       background-image: url(images/background2-phone.png);
    }
@@ -418,6 +542,19 @@ nav ul img, img.open {
 
    .header-text h1 {
       font-size: 30px;
+   }
+
+   .header-text .tagline {
+      font-size: 14px;
+   }
+
+   .hero-stack {
+      gap: 6px;
+   }
+
+   .stack-badge {
+      font-size: 11px;
+      padding: 4px 10px;
    }
 
    nav ul img, img.open {
@@ -451,13 +588,12 @@ nav ul img, img.open {
       cursor: pointer;
    }
 
-   /* Editing About me */
-
    .sub-title {
       font-size: 30px;
    }
 
-   .about-col-1, .about-col-2 {
+   .about-col-1,
+   .about-col-2 {
       flex-basis: 100%;
    }
 
@@ -474,12 +610,13 @@ nav ul img, img.open {
       margin-right: 20px;
    }
 
-   .contact-left, .contact-right {
+   .contact-left,
+   .contact-right {
       flex-basis: 100%;
    }
 
    .copyright {
-      font-size: 14px;
+      font-size: 12px;
    }
 
    .services-list div h2 {
@@ -487,10 +624,12 @@ nav ul img, img.open {
       font-weight: 650;
    }
 
-}
+   .tech-badge-grid {
+      gap: 6px;
+   }
 
-#msg {
-   color: #61b752;
-   margin-top: -40px;
-   display: block;
+   .tech-badge {
+      font-size: 11px;
+      padding: 4px 10px;
+   }
 }
