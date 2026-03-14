@@ -4,53 +4,66 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="styles.css">
-   <title>Baraza's Portfolio</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+   <title>Said Baraza | Edge AI/ML Engineer</title>
 </head>
 <body>
    <div id="header">
       <div class="container">
          <nav>
-            <img src="images/logo2.png" class="logo">
+            <img src="images/logo2.png" class="logo" alt="Logo">
             <ul id="sidemenu">
                <li><a href="#header" onclick="closemenu()">Home</a></li>
                <li><a href="#about" onclick="closemenu()">About</a></li>
                <li><a href="#services" onclick="closemenu()">Services</a></li>
                <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
                <li><a href="#contact" onclick="closemenu()">Contact</a></li>
-               <img src="icons/close.png" onclick="closemenu()">
+               <img src="icons/close.png" onclick="closemenu()" alt="Close">
             </ul>
-            <img src="icons/menu.png" class="open" onclick="openmenu()">
+            <img src="icons/menu.png" class="open" onclick="openmenu()" alt="Menu">
          </nav>
+
          <div class="header-text">
-            <p>Edge AI/ML junior Engineer.</p>
+            <p class="tagline">Designing intelligence for constrained hardware.</p>
             <h1>Hi, I'm Said <span>Baraza</span><br>From Tanzania</h1>
+            <div class="hero-stack">
+               <span class="stack-badge">ESP32</span>
+               <span class="stack-badge">TensorFlow Lite</span>
+               <span class="stack-badge">ESP-IDF</span>
+               <span class="stack-badge">FreeRTOS</span>
+               <span class="stack-badge">IoT</span>
+               <span class="stack-badge">Edge AI</span>
+            </div>
          </div>
       </div>
    </div>
 
-<!-- The About Section Starts Here -->
+<!-- ============ About ============ -->
    <div id="about">
       <div class="container">
          <div class="row">
             <div class="about-col-1">
-               <img src="images/me.jpg">
+               <img src="images/me.jpg" alt="Said Baraza">
             </div>
             <div class="about-col-2">
-               <h1 class="sub-title">About <span style="color: #ff004f;">Me</span></h1>
+               <h1 class="sub-title">About <span style="color:#ff004f;">Me</span></h1>
                <p>
-                  Hello folks👋 Said Baraza here, a passionate Computer Engineering student with a deep 
-                  <br>interest in Edge AI/ML Engineering.
-                  <br><br>I speialize in Embedded systems, IoT solutions and AI models development for Microcontrollers, using TensorFlow Lite and ESP-IDF Framework. 
-                  <br> My experience includes working with ESP32 for Smart home automation and many more Systems.
-                  <br><br> I have developed an IoT-based smart Home automation system System using ESP32 
-                  <br> My works include both Hardware and Software.
-                  <br><br>My Dream is to create an innovative IoT solution for improving our daily life, supporting private organization and government automations.
-                  <br>I am to be a recognized Computer Engineer and contribute to AI-powered embedded systems.
-                  <br><br>Besides tech, I enjoy sharing my knowledge through YouTube channel and explore AI applications in
-                  <br>Embedded Sytems.
-                  <br><br>Feel free to explore my projects and connect with me via email or social media platforms.
-                  <br><hr>
+                  Hello 👋 I'm Said Baraza — a Computer Engineering student at the University of Dodoma
+                  with a deep focus on <strong>Edge AI/ML Engineering</strong>. I build intelligent systems
+                  that run directly on microcontrollers, eliminating cloud dependency and enabling real-time
+                  inference at the edge.
+                  <br><br>
+                  I specialize in firmware development with <strong>ESP-IDF</strong>, deploying quantized
+                  TensorFlow Lite models on ESP32, and designing end-to-end IoT solutions from hardware
+                  to user-facing web interfaces. My goal is to make AI accessible in resource-constrained
+                  environments — smart homes, embedded sensors, and autonomous devices.
+                  <br><br>
+                  Beyond building, I share my knowledge through my
+                  <a href="https://youtube.com/@barazabytes" target="_blank" style="color:#ff004f;">YouTube channel</a>
+                  and am working toward contributing to AI-powered embedded systems that improve daily life.
                </p>
+               <hr>
 
                <div class="tab-titles">
                   <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -58,26 +71,67 @@
                   <p class="tab-links" onclick="opentab('education')">Education</p>
                </div>
 
+               <!-- Skills Tab -->
                <div class="tab-contents active-tab" id="skills">
                   <ul>
-                     <li><span>Embedded System Development</span><br>Creating Robust Home automation systems
-                     <br>Using <span>ESP-IDF</span> for Firmware development.</li>
-                     <li><span>Machine Learning</span><br>Creating Hardware devices with edge data interpretetion and execution.
+                     <li>
+                        <span>Embedded System Development</span><br>
+                        Firmware development using <span>ESP-IDF</span> and FreeRTOS on ESP32.
+                        Designing robust home automation and IoT systems from ground up.
+                     </li>
+                     <li>
+                        <span>Edge AI / Machine Learning</span><br>
+                        Deploying INT8 quantized <span>TensorFlow Lite</span> models on MCUs.
+                        On-device inference for real-time decision making without cloud dependency.
+                     </li>
+                     <li>
+                        <span>IoT Protocols & Connectivity</span><br>
+                        MQTT, WebSockets, HTTP REST APIs. Wireless communication via Wi-Fi & BLE on ESP32.
+                     </li>
+                     <li>
+                        <span>Web Interfaces for Embedded Devices</span><br>
+                        Lightweight self-hosted web UIs running directly on microcontrollers using <span>HTML5 / CSS3</span>.
+                     </li>
                   </ul>
+
+                  <div class="tech-badge-grid">
+                     <span class="tech-badge">ESP-IDF</span>
+                     <span class="tech-badge">TensorFlow Lite</span>
+                     <span class="tech-badge">FreeRTOS</span>
+                     <span class="tech-badge">C / C++</span>
+                     <span class="tech-badge">Python</span>
+                     <span class="tech-badge">MQTT</span>
+                     <span class="tech-badge">WebSockets</span>
+                     <span class="tech-badge">Edge Impulse</span>
+                     <span class="tech-badge">HTML5 / CSS3</span>
+                     <span class="tech-badge">Git</span>
+                  </div>
                </div>
 
+               <!-- Experience Tab -->
                <div class="tab-contents" id="experience">
                   <ul>
-                     <li><span>2025 </span><br>Created a Bulb controlling system <span>(BulbBuddy)</span></li>
+                     <li>
+                        <span>2025 — BulbBuddy</span><br>
+                        Built a self-hosted smart bulb control system on ESP32. The device serves its own
+                        web app over Wi-Fi — no cloud, no app store. Users toggle lights via a browser.
+                        Stack: <span>ESP-IDF · WebSockets · HTML/CSS · FreeRTOS</span>
+                     </li>
+                     <li>
+                        <span>Ongoing — Edge Impulse Experiments</span><br>
+                        Exploring keyword spotting and gesture recognition models optimized for ESP32's
+                        240 MHz dual-core CPU and 520 KB SRAM constraints using <span>TensorFlow Lite for Microcontrollers</span>.
+                     </li>
                   </ul>
                </div>
 
+               <!-- Education Tab -->
                <div class="tab-contents" id="education">
                   <ul>
-                     <li><span>2023 - 2027</span><br>Began taking a degree in <span>Computer Engineering</span> at University of <span>Dodoma</span></li>
-                     <li><span>2021-2023</span><br>Took My High School Certificate at <span>Azania Boys'</span> High School </li>
-                     <li><span>2017-2020</span><br>Took My Ordinary-Level Certificate at <span>Deo-Sanga</span> Secondary School</li>
-                     <li><span>2009-2016</span><br>Took My Primary-Level Certificate at <span>Kahawa</span> Primary School</li>
+                     <li><span>2023 – 2027</span><br>B.Sc. <span>Computer Engineering</span> — University of <span>Dodoma</span></li>
+                     <li><span>2021 – 2023</span><br>A-Level Certificate — <span>Azania Boys'</span> High School</li>
+                     <li><span>2017 – 2020</span><br>O-Level Certificate — <span>Deo-Sanga</span> Secondary School</li>
+                     <li><span>2009 – 2016</span><br>Primary Certificate — <span>Kahawa</span> Primary School</li>
                   </ul>
                </div>
             </div>
@@ -85,73 +139,111 @@
       </div>
    </div>
 
-<!-- --Services Page starts Here-- -->
+<!-- ============ Services ============ -->
    <div id="services">
       <div class="container">
          <h1 class="sub-title">My Services</h1>
          <div class="services-list">
+
             <div>
-               <img src="icons/chipupe.png">
+               <img src="icons/chipupe.png" alt="Embedded Systems">
                <h2>Embedded System Development</h2>
-               <p>Creating Robust Home automation systems Using <span style="font-weight: bold;">ESP-IDF</span> for Micro-controller programming <b>ESP32</b>
+               <p>End-to-end firmware development for ESP32 using <strong>ESP-IDF</strong> and FreeRTOS.
+               From hardware design to wireless connectivity — smart home automation, sensor networks, and IoT devices.</p>
                <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
             </div>
 
             <div>
-               <img src="icons/upe.png">
-               <h2>Machine Learning</h2>
-               <p>Creating cut edge Models for Microcontrollers for smart Home automation devices</p>
+               <img src="icons/upe.png" alt="Edge AI">
+               <h2>Edge AI Model Deployment</h2>
+               <p>Deploying INT8 quantized <strong>TensorFlow Lite</strong> models directly onto microcontrollers.
+               On-device inference for image classification, keyword spotting, and anomaly detection — no cloud required.</p>
                <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
             </div>
 
             <div>
-               <img src="icons/appupe.png">
-               <h2>Embedded systems Web Development</h2>
-               <p>Creating User friendly websites for smart Home automation devices.
-                  using <span style="font-weight: bold;">HTML5 and CSS3</span></p>
+               <img src="icons/appupe.png" alt="IoT Web UI">
+               <h2>IoT Web Interface Design</h2>
+               <p>Building lightweight, self-hosted web dashboards that run directly on ESP32.
+               Control and monitor your embedded device from any browser on the local network — no app install needed.</p>
                <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
             </div>
+
          </div>
       </div>
    </div>
 
-<!-- ------------------Portfolio-------------------- -->
+<!-- ============ Portfolio ============ -->
    <div id="portfolio">
       <div class="container">
          <h1 class="sub-title">My Work</h1>
          <div class="work-list">
+
+            <!-- Project 1: BulbBuddy -->
             <div class="work">
-               <img src="images/work-2.png" >
+               <img src="images/work-2.png" alt="BulbBuddy Project">
                <div class="layer">
                   <h3>BulbBuddy</h3>
-                  <p>A simple Home automation system that allow Users to control their House Light Bulbs using Web app</p>
-                  <a href="https://youtube.com/@barazabytes"><img src="icons/link.png" target="_blank"></a>
+                  <div class="project-tags">
+                     <span>ESP32</span><span>ESP-IDF</span><span>WebSockets</span><span>FreeRTOS</span>
+                  </div>
+                  <p>Self-hosted smart bulb control system. The ESP32 serves its own web app over Wi-Fi —
+                  control house lights from any browser with zero cloud dependency.</p>
+                  <a href="https://youtube.com/@barazabytes" target="_blank"><img src="icons/link.png" alt="Link"></a>
                </div>
             </div>
+
+            <!-- Project 2: Coming Soon -->
+            <div class="work coming-soon-card">
+               <div class="coming-soon-inner">
+                  <div class="cs-icon">⚙️</div>
+                  <h3>Edge AI Classifier</h3>
+                  <div class="project-tags">
+                     <span>TFLite</span><span>ESP32</span><span>Edge Impulse</span>
+                  </div>
+                  <p>On-device ML inference for real-time classification. Deploying a quantized TensorFlow Lite model on ESP32 with no cloud round-trip.</p>
+                  <span class="coming-soon-label">Coming Soon</span>
+               </div>
+            </div>
+
+            <!-- Project 3: Coming Soon -->
+            <div class="work coming-soon-card">
+               <div class="coming-soon-inner">
+                  <div class="cs-icon">📡</div>
+                  <h3>MQTT Sensor Network</h3>
+                  <div class="project-tags">
+                     <span>MQTT</span><span>ESP32</span><span>FreeRTOS</span>
+                  </div>
+                  <p>Multi-node IoT sensor network with a central MQTT broker. Real-time environmental monitoring across distributed ESP32 nodes.</p>
+                  <span class="coming-soon-label">Coming Soon</span>
+               </div>
+            </div>
+
          </div>
-         <a href="https://youtube.com/@barazabytes" class="btn">See More</a>
+         <a href="https://youtube.com/@barazabytes" class="btn" target="_blank">See More on YouTube</a>
       </div>
    </div>
-   
-<!-- ------------------------contact-------------------- -->
+
+<!-- ============ Contact ============ -->
    <div id="contact">
       <div class="container">
          <div class="row">
             <div class="contact-left">
-               <h1 class="sub-title">Contact <span style="color: #ff004f;">Me</span></h1>
-               <p><img src="icons/email.png">barazars45@gmail.com</p>
-               <p><img src="icons/phone.png">0748-420-430</p>
+               <h1 class="sub-title">Contact <span style="color:#ff004f;">Me</span></h1>
+               <p><img src="icons/email.png" alt="Email">barazars45@gmail.com</p>
+               <p><img src="icons/phone.png" alt="Phone">0748-420-430</p>
                <div class="social-icons">
-                  <a href="https://instagram.com/baraza_rs" target="_blank"><img src="icons/instag.png"></a>
-                  <a href="https://linkedin.com/in/said-baraza" target="_blank"><img src="icons/in.png"></a>
+                  <a href="https://instagram.com/baraza_rs" target="_blank" title="Instagram"><img src="icons/instag.png" alt="Instagram"></a>
+                  <a href="https://linkedin.com/in/said-baraza" target="_blank" title="LinkedIn"><img src="icons/in.png" alt="LinkedIn"></a>
+                  <a href="https://github.com/said-baraza" target="_blank" title="GitHub"><img src="icons/github.png" alt="GitHub"></a>
                </div>
                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                <form name="submit-to-google-sheet">
                   <input type="text" name="Name" placeholder="Your Name" required>
-                  <input type="text" name="Email" placeholder="Your Email" required>
-                  <textarea name="Message" rows="6" placeholder="Your messsage"></textarea>
+                  <input type="email" name="Email" placeholder="Your Email" required>
+                  <textarea name="Message" rows="6" placeholder="Your message"></textarea>
                   <button type="submit" class="btn btn2">Submit</button>
                   <span id="msg"></span>
                </form>
@@ -159,63 +251,44 @@
          </div>
       </div>
       <div class="copyright">
-         <p>Copyright &copy; <span style="color: #ff004f;">2025</span> Baraza</p>
+         <p>Copyright &copy; <span style="color:#ff004f;">2025</span> Said Baraza &mdash; Edge AI/ML Engineer</p>
       </div>
    </div>
+
+   <!-- ===== Scripts ===== -->
    <script>
-   // Used to animate the About Me Page
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
 
-      function opentab(tabname) {   // Removes the UnderLine and it's respective Contents
-         for(tablink of tablinks) {
-            tablink.classList.remove("active-link"); // Removes the Underline
-         }
-         for(tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab"); // Removes the Contents
-         }
-
-         event.currentTarget.classList.add("active-link");  // This Statement makes the active link have the Underline (Daaaaamn!)
+      function opentab(tabname) {
+         for (var tablink of tablinks) tablink.classList.remove("active-link");
+         for (var tabcontent of tabcontents) tabcontent.classList.remove("active-tab");
+         event.currentTarget.classList.add("active-link");
          document.getElementById(tabname).classList.add("active-tab");
-      
       }
    </script>
 
    <script>
-      // Used to animate the side bar
       var sidemenu = document.getElementById("sidemenu");
-
-      function openmenu() {
-         sidemenu.style.right = "0";
-      }
-
-      function closemenu() {
-         sidemenu.style.right = "-200px";
-      }
+      function openmenu() { sidemenu.style.right = "0"; }
+      function closemenu() { sidemenu.style.right = "-200px"; }
    </script>
+
    <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbz3pCFHXsYSfPcxM1VpCKNcaiCvP6e5wdtNU4TA4CPVl6TM5SzgVHyIA-YjvBDCakp8/exec'
       const form = document.forms['submit-to-google-sheet']
       const msg = document.getElementById("msg");
 
       form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            msg.innerHTML = "Message sent Successifully😊"
-            setTimeout(function() {
-               msg.innerHTML = "";
-            }, 3000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
+         e.preventDefault()
+         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+               msg.innerHTML = "Message sent successfully 😊"
+               setTimeout(() => { msg.innerHTML = ""; }, 3000)
+               form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
       })
-    </script>
+   </script>
 </body>
 </html>
-
-
-
-
-
-
