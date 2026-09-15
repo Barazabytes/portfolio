@@ -1,325 +1,626 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+
+██╗░░░██╗██╗███╗░░██╗░█████╗░██████╗░
+██║░░░██║██║████╗░██║██╔══██╗██╔══██╗
+╚██╗░██╔╝██║██╔██╗██║██║░░██║██║░░██║
+░╚████╔╝░██║██║╚████║██║░░██║██║░░██║
+░░╚██╔╝░░██║██║░╚███║╚█████╔╝██████╔╝
+░░░╚═╝░░░╚═╝╚═╝░░╚══╝░╚════╝░╚═════╝░
+░░░░░██╗░█████╗░███╗░░██╗░██████╗░██╗██████╗░
+░░░░░██║██╔══██╗████╗░██║██╔════╝░██║██╔══██╗
+░░░░░██║███████║██╔██╗██║██║░░██╗░██║██║░░██║
+██╗░░██║██╔══██║██║╚████║██║░░╚██╗██║██║░░██║
+╚█████╔╝██║░░██║██║░╚███║╚██████╔╝██║██████╔╝
+░╚════╝░╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝╚═════╝░
+What are you doing here?! you sneaky developer...
+-->
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">   
-   <title>Said Baraza | Edge AI/ML Engineer</title>
-</head>
-<body>
-   <div id="header">
-      <div class="container">
-         <nav>
-            <img src="images/logo2.png" class="logo">
-            <ul id="sidemenu">
-               <li><a href="#header" onclick="closemenu()">Home</a></li>
-               <li><a href="#about" onclick="closemenu()">About</a></li>
-               <li><a href="#services" onclick="closemenu()">Services</a></li>
-               <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
-               <li><a href="#contact" onclick="closemenu()">Contact</a></li>
-               <img src="icons/close.png" onclick="closemenu()">
-            </ul>
-            <img src="icons/menu.png" class="open" onclick="openmenu()">
-         </nav>
-         <div class="header-text">
-            <p>Building intelligent systems</p>
-            <h1>Hi, I'm Said <span>Baraza</span><br>From Tanzania</h1>
-         </div>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000" />
+  <meta property="og:image" content="https://v1.vinodjangid.site/src/png/Preview-card-min.png" />
+  <meta property="og:title" content="Vinod Jangid | Portfolio" />
+  <meta property="og:url" content="https://v1.vinodjangid.site" />
+  <meta property="og:site_name" content="Vinod Jangid Portfolio" />
+  <title>Vinod Jangid | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+  <!-- aos cdn -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- google fonts-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
 
-         
-      <!-- ── Hero ── -->         
-            <div class="hero-stack">
-               <span class="stack-badge">ESP32</span>
-               <span class="stack-badge">TF-Lite</span>
-               <span class="stack-badge">ESP-IDF</span>
-               <span class="stack-badge">FreeRTOS</span>
-               <span class="stack-badge">MQTT</span>
-               <span class="stack-badge">Edge Impulse</span>
-               <span class="stack-badge">C/C++</span>
-               <span class="stack-badge">Python</span>
-            </div>      
+<body class="body has-announcement">
+  <audio loop="" id="audioPlayer" style="display: none">
+    <source src="src/mp3/preloader.mp3" type="audio/mp3" />
+  </audio>
+  <div id="preloader"></div>
+  <noscript>Allow Javascript</noscript>
+
+  <header>
+    <div class="cursor-inner" id="cursor-inner"></div>
+    <div class="cursor-outer" id="cursor-outer"></div>
+
+    <div class="navbar" id="navbar">
+      <div class="hey">Hey!</div>
+      <div class="logo" tabindex="0" aria-label="vinod jangid logo">
+        <div class="logo-top">
+          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
+        </div>
       </div>
-   </div>
+      <div class="navbar-tabs" id="navbar-tabs">
+        <ul class="navbar-tabs-ul">
+          <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+            <a href="#home" tabindex="0" aria-label="Home menu button">
+              &#60;/Home&#62;
+            </a>
+          </li>
 
+          <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+            <a href="#about" aria-label="about menu button">
+              &#60;/AboutMe&#62;
+            </a>
+          </li>
 
-<!-- The About Section Starts Here -->
-   <div id="about">
-      <div class="container">
-         <div class="row">
-            <div class="about-col-1">
-               <img src="images/me.jpg">
-            </div>
-            
-            <div class="about-col-2">
-               <h1 class="sub-title">About <span style="color: #ff004f;">Me</span></h1>
-               <p class="bio-text">
-                  I'm a <strong>Computer Engineering student</strong> at the University of Dodoma with a focused
-                  interest in Edge AI/ML &mdash; the intersection of machine learning and embedded hardware.
-                  <br><br>
-                  I specialize in deploying quantized <strong>TensorFlow Lite</strong> models on
-                  resource-constrained devices like the ESP32, and building complete IoT systems from
-                  firmware to user-facing web interfaces.
-                  <br><br>
-                  My goal: make on-device AI practical for real-world applications &mdash; smart homes,
-                  autonomous sensors, and embedded automation. I share progress on my
-                  <a href="https://youtube.com/@barazabytes" target="_blank">YouTube channel &nearr;</a>.
-               </p>
+          <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+            <a href="#skills" aria-label="skills menu button">
+              &#60;/Skills&#62;
+            </a>
+          </li>
 
-               <div class="tab-titles">
-                  <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                  <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                  <p class="tab-links" onclick="opentab('education')">Education</p>
-               </div>
-
-               <div class="tab-contents active-tab" id="skills">
-                  <div class="skill-list">
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">Embedded Systems (ESP-IDF / FreeRTOS)</span><span class="sk-val">85%</span></div>
-                        <div class="sk-track"><div class="sk-fill" data-w="85"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">Edge AI / TensorFlow Lite</span><span class="sk-val">75%</span></div>
-                        <div class="sk-track"><div class="sk-fill teal" data-w="75"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">IoT Protocols (MQTT / WebSockets)</span><span class="sk-val">80%</span></div>
-                        <div class="sk-track"><div class="sk-fill amber" data-w="80"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">C / C++ Firmware</span><span class="sk-val">78%</span></div>
-                        <div class="sk-track"><div class="sk-fill" data-w="78"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">Python (ML scripting)</span><span class="sk-val">70%</span></div>
-                        <div class="sk-track"><div class="sk-fill purple" data-w="70"></div></div>
-                     </div>
-                     <div class="sk-row">
-                        <div class="sk-top"><span class="sk-name">Web Interfaces (HTML / CSS / JS)</span><span class="sk-val">72%</span></div>
-                        <div class="sk-track"><div class="sk-fill amber" data-w="72"></div></div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="tab-contents" id="experience">
-                  <ul>
-                     <li><span>2025 — BulbBuddy </span><br>Self-hosted smart bulb control on ESP32. Stack: ESP-IDF · WebSockets · FreeRTOS</span></li>
-                     <li><span>Ongoing — Edge Impulse </span><br>Keyword spotting and gesture recognition for ESP32 using TFLite for Microcontrollers.</li>
-                  </ul>
-               </div>
-
-               <div class="tab-contents" id="education">
-                  <ul>
-                     <li><span>2023-2027</span><br>Began taking a degree in <span>Computer Engineering</span> at University of <span>Dodoma</span></li>
-                     <li><span>2021-2023</span><br>Took My High School Certificate at <span>Azania Boy's</span> High School </li>
-                     <li><span>2017-2020</span><br>Took My Ordinary-Level Certificate at <span>Deo-Sanga</span> Secondary School</li>
-                     <li><span>2009-2016</span><br>Took My Primary-Level Certificate at <span>Kahawa</span> Primary School</li>
-                  </ul>
-               </div>
-            </div>
-         </div>
+          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+            <a href="#projects" aria-label="projects menu button">
+              &#60;/Projects&#62;
+            </a>
+          </li>
+        </ul>
       </div>
-   </div>
+      <!-- navbar tabs ends -->
+    </div>
+  </header>
+  <!-- header ends here -->
 
-<!-- --Services Page starts Here-- -->
-   <div id="services">
-      <div class="container">
-         <h1 class="sub-title">My Services</h1>
-         <div class="services-list">
-            <div>
-               <img src="icons/chipupe.png">
-               <h2>Embedded System Development</h2>
-               <p>End-to-end firmware for ESP32 using ESP-IDF and FreeRTOS. Smart home automation, sensor networks, and IoT devices.</p>
-               <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
-            </div>
-
-            <div>
-               <img src="icons/ai.png">
-               <h2>Edge AI Model Deployment</h2>
-               <p>INT8 quantized TensorFlow Lite models on MCUs. On-device inference image classification, keyword spotting, anomaly detection.</p>
-               <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
-            </div>
-
-            <div>
-               <img src="icons/appupe.png">
-               <h2>IoT Web Interface Design</h2>
-               <p>Lightweight self-hosted dashboards running directly on ESP32. Control from any browser no cloud, no app install.</p>
-               <a href="https://youtube.com/@barazabytes" target="_blank">Learn More</a>
-            </div>
-         </div>
+  <main>
+    <!-- hamburger -->
+    <div class="hamburger" id="hamburger" data-aos="fade">
+      <div class="hamburgerbase">
+        <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
+          <span class="burger-bar" id="burger-bar1"></span>
+          <span class="burger-bar" id="burger-bar2"></span>
+          <span class="burger-bar" id="burger-bar3"></span>
+        </button>
       </div>
-   </div>
+    </div>
+    <!-- hamburger -->
+    <div class="mobiletogglemenu" id="mobiletogglemenu">
+      <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
+        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
+          <a href="#home" tabindex="0" aria-label="Home menu button">
+            &#60;/Home&#62;
+          </a>
+        </li>
 
-<!-- ------------------Portfolio-------------------- -->
-   <div id="portfolio">
-      <div class="container">
-         <h1 class="sub-title">My Work</h1>
-         <div class="work-list">
-            
-            <div class="work">
-               <img src="images/bulb.jpg" >
-               <div class="layer">
-                  <h3>BulbBuddy</h3>
-                  <p>Self-hosted smart bulb control. ESP32 serves its own web app over Wi-Fi control house lights from any browser, zero cloud dependency.</p>
-                  <a href="https://youtube.com/@barazabytes"><img src="icons/link.png" target="_blank"></a>
-                  <a href="docs/bulbbuddy-documentation.pdf" download class="p-btn">&#128196;</a>
-               </div>
+        <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
+          <a href="#about" tabindex="0" aria-label="about menu button">
+            &#60;/AboutMe&#62;
+          </a>
+        </li>
+        <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
+          <a href="#skills" tabindex="0" aria-label="skills menu button">
+            &#60;/Skills&#62;
+          </a>
+        </li>
+        <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
+          <a href="#projects" tabindex="0" aria-label="projects menu button">
+            &#60;/Projects&#62;
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- mobile toggle menu ends -->
+
+    <section class="landing-page-container" id="home">
+      <div class="blob"></div>
+
+      <div class="text-content">
+        <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
+          <p class="jello"><b>H</b></p>
+          <p class="jello"><b>i</b></p>
+          &nbsp;
+          <p class="jello">I</p>
+          <p class="jello">'</p>
+          <p class="jello">m</p>
+        </article>
+        <article id="name" data-aos="fade-up" data-aos-delay="200">
+          <p class="jello">S</p>
+          <p class="jello">a</p>
+          <p class="jello">i</p>
+          <p class="jello">d</p>
+          &nbsp;
+          <p class="jello">B</p>
+          <p class="jello">a</p>
+          <p class="jello">r</p>
+          <p class="jello">a</p>
+          <p class="jello">z</p>
+          <p class="jello">a</p>
+          <p class="jello">.</p>
+        </article>
+
+        <article id="work" data-aos="fade-up" data-aos-delay="400">
+          <div>
+            <p class="jello">I</p>
+          </div>
+          <div>
+            <p class="jello">E</p>
+            <p class="jello">n</p>
+            <p class="jello">g</p>
+            <p class="jello">i</p>
+            <p class="jello">n</p>
+            <p class="jello">e</p>
+            <p class="jello">e</p>
+            <p class="jello">r</p>
+          </div>
+          <br>
+          <div>
+            <p class="jello">E</p>
+            <p class="jello">m</p>
+            <p class="jello">b</p>
+            <p class="jello">e</p>
+            <p class="jello">d</p>
+            <p class="jello">d</p>
+            <p class="jello">e</p>
+            <p class="jello">d</p>
+          </div>
+          <div>
+            <p>&</p>
+          </div>
+          <div>
+            <p class="jello">I</p>
+            <p class="jello">o</p>
+            <p class="jello">T</p>
+          </div>
+          <div>
+            <p class="jello">s</p>
+            <p class="jello">y</p>
+            <p class="jello">s</p>
+            <p class="jello">t</p>
+            <p class="jello">e</p>
+            <p class="jello">m</p>
+            <p class="jello">s</p>
+            <p class="jello">.</p>
+          </div>
+        </article>
+        <p id="info-para" data-aos="fade-up" data-aos-delay="600">
+          Embedded and IoT Engineer with experience of Hardware and firmware development.
+          I Love solving real life problems, collaboration and making system products.<br />
+          <br />
+          I value simple content structure, clean design patterns, and
+          thoughtful interactions.
+        </p>
+        <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
+          <a href="mailto:barazars45@gmail.com" tabindex="-1" target="_blank">
+            <button class="letsTalkBtn">
+              <p class="letsTalkBtn-text">Let's Talk!</p>
+              <span class="letsTalkBtn-BG"></span>
+            </button></a>
+          <div class="setting-container" id="setting-container">
+            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
+
+            <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
+              aria-label="settings for sound and appearance"></label>
+
+            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
+              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
+              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
+                aria-label="switch appearance"></label>
             </div>
 
-            <div class="work">
-               <img src="images/station.jpg" >
-               <div class="layer">
-                  <h3>Smart Weather Station</h3>
-                  <p>Self-hosted smart Weather station. ESP32 serves its own web app over Wi-Fi delivering weather data from any browser, zero cloud dependency.</p>
-                  <a href="https://www.youtube.com/shorts/LgD0wtP8Gww"><img src="icons/link.png" target="_blank"></a>
-                  <a href="images/Station Documentation.pdf" download class="p-btn">&#128196;</a>
-               </div>
+            <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
+              <input type="checkbox" id="switchforsound" onclick="playpause()" />
+              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
+                class="needtobeinvert"></label>
             </div>
-            
-            <!-- Coming soon 1 -->
-            <div class="coming-soon-card">
-               <div class="coming-soon-inner">
-                  <div class="cs-icon">&#9881;&#65039;</div>
-                  <h3>Edge AI Classifier</h3>
-                  <div class="project-tags">
-                     <span>TFLite</span><span>ESP32</span><span>Edge Impulse</span>
-                  </div>
-                  <p>Quantized TFLite model on ESP32 for real-time on-device inference &mdash; no cloud round-trip.</p>
-                  <div class="cs-footer">
-                     <span class="coming-soon-label">Coming Soon</span>
-                     <a href="docs/edge-ai-classifier-docs.pdf" download class="cs-doc-btn">&#128196;</a>
-                  </div>
-               </div>
-            </div>
- 
-            <!-- Coming soon 2 -->
-            <div class="coming-soon-card">
-               <div class="coming-soon-inner">
-                  <div class="cs-icon">&#128225;</div>
-                  <h3>MQTT Sensor Network</h3>
-                  <div class="project-tags">
-                     <span>MQTT</span><span>ESP32</span><span>FreeRTOS</span>
-                  </div>
-                  <p>Multi-node IoT sensor network with central MQTT broker. Real-time environmental monitoring across distributed ESP32 nodes.</p>
-                  <div class="cs-footer">
-                     <span class="coming-soon-label">Coming Soon</span>
-                     <a href="docs/mqtt-network-docs.pdf" download class="cs-doc-btn">&#128196;</a>
-                  </div>
-               </div>
-            </div>
-            
-         </div>
-         <a href="https://youtube.com/@barazabytes" class="btn">See More</a>
+          </div>
+          <!-- setting div ends -->
+        </div>
+        <!-- contact-btn-div -->
       </div>
-   </div>
-   
-<!-- ------------------------contact-------------------- -->
-   <div id="contact">
-      <div class="container">
-         <div class="row">
-            <div class="contact-left">
-               <h1 class="sub-title">Contact <span style="color: #ff004f;">Me</span></h1>
-               <p><img src="icons/email.png">barazars45@gmail.com</p>
-               <p><img src="icons/phone.png">0748-420-430</p>
-               <div class="social-icons">
-                  <a href="https://www.facebook.com/said.baraza.90" target="_blank"><img src="icons/fb.png"></a>
-                  <a href="https://x.com/barazars45" target="_blank"><img src="icons/xupe.png"></a>
-                  <a href="https://instagram.com/kin_cde" target="_blank"><img src="icons/instag.png"></a>
-                  <a href="https://linkedin.com/in/said-baraza-a3078b357" target="_blank"><img src="icons/in.png"></a>
-               </div>
-               <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-               <form name="submit-to-google-sheet">
-                  <input type="text" name="Name" placeholder="Your Name" required>
-                  <input type="text" name="Email" placeholder="Your Email" required>
-                  <textarea name="Message" rows="6" placeholder="Your messsage"></textarea>
-                  <button type="submit" class="btn btn2">Submit</button>
-                  <span id="msg"></span>
-               </form>
-            </div>
-         </div>
-      </div>
-      <div class="copyright">
-         <p>Copyright &copy; <span style="color: #ff004f;">2025</span> Baraza</p>
-      </div>
-   </div>
+     
+    </section>
+    <!-- landing page ends here -->
+    <section class="about-section-container" id="about" data-aos="fade-up">
+      <div class="about-section">
+        <div class="section-heading">
+          <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
+            &#60;/AboutMe&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
 
-   <!-- ===== Scripts ===== -->
-   <script>
-      var tablinks    = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
- 
-      function opentab(tabname) {
-         for (var tl of tablinks)    tl.classList.remove("active-link");
-         for (var tc of tabcontents) tc.classList.remove("active-tab");
-         event.currentTarget.classList.add("active-link");
-         document.getElementById(tabname).classList.add("active-tab");
-         if (tabname === 'skills') animateBars();
-      }
- 
-      function animateBars() {
-         document.querySelectorAll('.sk-fill').forEach(function(el) {
-            el.style.width = '0';
-            setTimeout(function() { el.style.width = el.dataset.w + '%'; }, 80);
-         });
-      }
-      window.addEventListener('load', function() { setTimeout(animateBars, 400); });
-   </script>
- 
-   <script>
-      var sidemenu = document.getElementById("sidemenu");
-      function openmenu()  { sidemenu.style.right = "0"; }
-      function closemenu() { sidemenu.style.right = "-200px"; }
-   </script>
- 
-   <script>
-      var APPS_SCRIPT_URL    = 'https://script.google.com/macros/s/AKfycbyGHo5SBMqoGkSns938yWxhWvCCLZ_5RJemPicmcUE055A53JKRu86BJBnaAdTUsTXl/exec';
-      var GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse';
-      var GF_FIELD_NAME      = 'entry.NAME_FIELD_ID';
-      var GF_FIELD_EMAIL     = 'entry.EMAIL_FIELD_ID';
-      var GF_FIELD_MESSAGE   = 'entry.MESSAGE_FIELD_ID';
- 
-      var contactForm = document.getElementById('contact-form');
-      var msgEl       = document.getElementById('msg');
- 
-      contactForm.addEventListener('submit', function(e) {
-         e.preventDefault();
-         var name    = contactForm.Name.value.trim();
-         var email   = contactForm.Email.value.trim();
-         var message = contactForm.Message.value.trim();
-         if (!name || !email || !message) {
-            msgEl.style.color = '#ff004f'; msgEl.innerHTML = 'Please fill in all fields.'; return;
-         }
-         msgEl.style.color = '#ababab'; msgEl.innerHTML = 'Sending...';
-         var fd = new FormData();
-         fd.append('Name', name); fd.append('Email', email); fd.append('Message', message);
-         fetch(APPS_SCRIPT_URL, { method: 'POST', body: fd }).catch(function() {});
-         var iframe = document.createElement('iframe');
-         iframe.name = 'gf-hidden'; iframe.style.display = 'none';
-         document.body.appendChild(iframe);
-         var gfForm = document.createElement('form');
-         gfForm.action = GOOGLE_FORM_ACTION; gfForm.method = 'POST'; gfForm.target = 'gf-hidden';
-         var fields = {}; fields[GF_FIELD_NAME] = name; fields[GF_FIELD_EMAIL] = email; fields[GF_FIELD_MESSAGE] = message;
-         Object.keys(fields).forEach(function(key) {
-            var inp = document.createElement('input');
-            inp.type = 'hidden'; inp.name = key; inp.value = fields[key]; gfForm.appendChild(inp);
-         });
-         document.body.appendChild(gfForm); gfForm.submit();
-         setTimeout(function() {
-            if (iframe.parentNode) document.body.removeChild(iframe);
-            if (gfForm.parentNode) document.body.removeChild(gfForm);
-         }, 4000);
-         msgEl.style.color = '#61b752';
-         msgEl.innerHTML = "Message sent! I'll get back to you soon.";
-         setTimeout(function() { msgEl.innerHTML = ''; }, 5000);
-         contactForm.reset();
+        <div class="info-dp-section">
+          <div class="about-info">
+            <p tabindex="0">
+              Hi! My name is <b>Said</b>. I'm Embedded and IoT systems Engineer. I love creating things that exist on our daily lives. My interest in Embedded and IoT systems started back in <b>2020</b> when I wish to be like Tony Stark. <br> <br>
+            </p>
+            <br />
+            <p tabindex="0">
+              Instead of creating fun projects, i started
+              enjoying solving real world issues relating both Hardware and software. Creating custom things for fun taught
+              me a lot Embedded and IoT systems Engineering! <br> <br>
+            </p>
+            <br />
+            <p tabindex="0">
+              My main focus these days is building interesting & user friendly solutions to our,
+              daily lives. I like to code things from scratch, and enjoy bringing
+              ideas to life.
+            </p>
+             <!-- Resume button -->
+      <button class="resume-btn" id="resume-btn" onclick="openURL()">
+        <div class="sign">
+          <svg viewBox="0 0 640 512">
+            <path
+              d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
+          </svg>
+        </div>
+
+        <div class="text">Resume</div>
+      </button>
+          </div>
+
+          <div class="dp" data-aos="fade-up">
+            <img src="src/png/Brz.jpg" alt="Said Baraza" tabindex="0" aria-label="image of Baraza" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section ends  -->
+
+    <section class="skills-section-container" id="skills">
+      <div class="skills-section">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
+            &#60;/Skills&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+
+        <div class="frontend-dev-section">
+          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
+            aria-label="As a frontend a developer these are the skills i have">
+            Tech Stack
+          </h3>
+          <ul class="tech-stack-wrapper">
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/cpplogo.png" alt="Html skill" class="tech-stack-logo" />
+              <span class="tooltip">C++</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/clogo.png" alt="css skill" class="tech-stack-logo" />
+              <span class="tooltip">C</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/Arduino.png" alt="js skill" class="tech-stack-logo" />
+              <span class="tooltip">ARDUINO</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/Python.png" alt="tailwind skill" class="tech-stack-logo" />
+              <span class="tooltip">PYTHON</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
+              <span class="tooltip">GITHUB</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
+              <span class="tooltip">GIT</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- skills section ends -->
+    <section class="projects-section-container" id="projects">
+      <div class="projects-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
+            &#60;/Projects&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+        <div class="project-boxes-div">
+          <!-- <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <img src="src/webp/asher-favicon.webp" alt="atomic asher website favicon" class="faviconforProject" />
+                <article class="ProjectHeading">Atomic Asher Official Website</article>
+                <p class="ProjectDescription">
+                  Atomic Asher: A sleek and modern company website built to reflect their mission, team, and work through a clean and professional digital presence.
+                </p>
+                <div class="project-buttons">
+                  <a href="https://atomicasher.com" target="_blank" class="cta"
+                    aria-label="Visit atomicasher Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/asher-preview.webp" alt="atomicasher website preview image" />
+              </div>
+            </div>
+          </div> -->
+          <!-- ---------------------- -->
+          <!-- <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <img src="src/ico/stopscams-favicon.ico" alt="stopscams website favicon" class="faviconforProject" />
+                <article class="ProjectHeading">StopScams.in</article>
+                <p class="ProjectDescription">
+                  StopScams: An AI-powered platform that detects scam messages and supports users through digital fraud with smart tools and real-time help.
+                </p>
+                <div class="project-buttons">
+                  <a href="https://stopscams.in" target="_blank" class="cta"
+                    aria-label="Visit stopscams Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/stopscams-preview.webp" alt="stopscams website preview image" />
+              </div>
+            </div>
+          </div> -->
+          <!-- ---------------------- -->
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <img src="src/ico/stopscams-favicon.ico" alt="notesync website favicon" class="faviconforProject" />
+                <article class="ProjectHeading">Attendance</article>
+                <p class="ProjectDescription">
+                  <b>Attendance:</b> An RFID based Attendance system, designed to automate attendance collection operation in organizations like schools and offices. Made of both software and Hardware part with a smooth and minimal user interface.
+                </p>
+                <div class="project-buttons">
+                  <a href="https://github.com/Barazabytes/" target="_blank" class="github-redirect"
+                    aria-label="Visit Pexelicons on GitHub">
+                    <img src="src/svg/github.svg" alt="github redirect button" />
+                  </a>
+                  <a href="https://attend.bilali.space/" target="_blank" class="cta"
+                    aria-label="Visit NoteSync Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/png/image.png" alt="NoteSync website preview image" />
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------- -->
+          <!-- <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <img src="src/ico/wyd-favicon.ico" alt="withyourdog website favicon" class="faviconforProject" />
+                <article class="ProjectHeading">With Your Dog</article>
+                <p class="ProjectDescription">
+                  WithYour.Dog: Discover dog-friendly places near you with our simple Airtable-powered app, integrated with Ola Maps for seamless navigation.
+                </p>
+                <div class="project-buttons">
+                  <a href="https://withyour.dog" target="_blank" class="cta"
+                    aria-label="Visit withyourdog Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/wyd-preview.webp" alt="withyourdog website preview image" />
+              </div>
+            </div>
+          </div> -->
+          <!-- ---------------------- -->
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" />
+                <article class="ProjectHeading">Smart Nguzo</article>
+                <p class="ProjectDescription">
+                  <b>Smart Nguzo:</b> A simple IoT device mounted on an Electric pole to send notification to TANESCO whenever the Electric pole falls to fastern the Blackout recovery!
+                </p>
+                <div class="project-buttons">
+                  <a href="https://github.com/Barazabytes/TaifaTek/tree/main/Smart-Nguzo/" target="_blank" class="github-redirect"
+                    aria-label="Visit Pexelicons on GitHub">
+                    <img src="src/svg/github.svg" alt="github redirect button" />
+                  </a>
+                  <a href="https://youtube.com/@Barazabytes/" target="_blank" class="cta"
+                    aria-label="Visit Pexelicons Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/Group 76.webp" alt="Pexelicon website preview image" />
+              </div>
+            </div>
+          </div>
+          <!-- --------------------- -->
+          <!-- <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <img src="src/webp/lunetra-favicon.webp" alt="lunetra website favicon" class="faviconforProject" />
+                <article class="ProjectHeading">Lunetra Studio</article>
+                <p class="ProjectDescription">
+                  Lunetra Studio: A fashion-forward site showcasing elegant collections with modern design, built to highlight quality, story, and craftsmanship.
+                </p>
+                <div class="project-buttons">
+                  <a href="https://lunetra-studio.netlify.app/" target="_blank" class="cta"
+                    aria-label="Visit lunetra Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/lunetra-preview.webp" alt="Lunetra website preview image" />
+              </div>
+            </div>
+          </div> -->
+          <!-- --------------------- -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- main ends here -->
+
+  <footer id="footer">
+    <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
+      <article aria-label="Back to top">&#8592;BACK TO TOP</article>
+    </button>
+    <div class="footer-background">
+      <div class="footer-blob"></div>
+    </div>
+    <div class="footer-foreground">
+      <div class="footercontainer">
+        <div class="two-words">
+          <article tabindex="0" aria-label="Learning, Living, and Leveling Up, my quote">
+            "Learning, Living, and Leveling Up."
+          </article>
+        </div>
+        <div class="social-media-container">
+          <div class="getintouch-heading">
+            <article>GetinTouch();</article>
+          </div>
+          <div class="logos">
+            <a href="https://www.instagram.com/baraza_rs/" target="_blank" tabindex="0"
+              aria-label="My instagram"><svg viewBox="0 0 448 512" class="SocialHandle">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg></a>
+
+            <a href="https://www.linkedin.com/in/said-baraza/" target="_blank"
+              aria-label="My Linkdin"><svg class="SocialHandle" viewBox="0 0 448 512">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+              </svg></a>
+
+            <a href="https://github.com/Barazabytes" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
+                class="SocialHandle">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+              </svg></a>
+
+            <a href="mailto:barazars45@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
+                viewBox="0 0 512 512">
+                <path
+                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-avatar-container">
+          <img src="src/png/footer-avatar-vinod.png" alt="animation-head" class="footer-avatar-img" id="footer-wala-avatar"/>
+          <div class="footer-avatar-face">
+            <div class="footer-avatar-eye footer-left-eye">
+              <div class="footer-pupil"></div>
+            </div>
+            <div class="footer-avatar-eye footer-right-eye">
+              <div class="footer-pupil"></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <article>
+            Design & Built by Said Baraza
+            &#169; 2026
+          </article>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer ends here -->
+
+  <script src="main.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    function openURL() {
+      var url = "src/pdf/Vinod's Resume.pdf";
+
+      window.open(url, "_blank");
+    }
+  </script>
+
+  <script>
+    const cursorInner = document.getElementById("cursor-inner");
+    const cursorOuter = document.getElementById("cursor-outer");
+    const links = document.querySelectorAll("a,label,button");
+
+    document.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      cursorInner.style.left = `${posX}px`;
+      cursorInner.style.top = `${posY}px`;
+
+      // cursorOuter.style.left = `${posX}px`;
+      // cursorOuter.style.top = `${posY}px`;
+
+      cursorOuter.animate(
+        {
+          left: `${posX}px`,
+          top: `${posY}px`,
+        },
+        { duration: 500, fill: "forwards" }
+      );
+
+      links.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          cursorInner.classList.add("hover");
+          cursorOuter.classList.add("hover");
+        });
+        link.addEventListener("mouseleave", () => {
+          cursorInner.classList.remove("hover");
+          cursorOuter.classList.remove("hover");
+        });
       });
-   </script>
-   
+    });
+  </script>
 </body>
+
 </html>
-
-
-
